@@ -155,25 +155,105 @@ body {
     margin: 0;
 }
 
-/* Responsive design for mobile */
+/* Responsive design for tablet and mobile */
 @media (max-width: 768px) {
     body {
         padding: 0;
-        align-items: stretch;
+        align-items: flex-start;
     }
 
     .container {
         border-radius: 0;
         max-width: 100%;
-        min-height: 100vh;
-        padding: 40px 20px;
+        min-height: auto;
+        padding: 0;
+        background-color: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .logo-container,
+    .content-wrapper,
+    .testimonials-wrapper {
+        background-color: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 40px;
+        margin-left: 40px;
+        margin-right: 40px;
+        border-radius: 16px;
+    }
+
+    .logo-container {
+        margin-top: 40px;
+        margin-bottom: 40px !important;
+    }
+
+    .content-wrapper {
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+
+    .testimonials-wrapper {
+        margin-top: 0 !important;
+        margin-bottom: 40px;
+    }
+
+    /* Remove individual section backgrounds */
+    .headline,
+    .buttons-container,
+    .testimonials,
+    .copyright {
+        background-color: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        padding: 0;
+        margin: 0 !important;
+        border: none;
+    }
+
+    .headline {
+        margin-bottom: 40px !important;
+    }
+
+    .testimonials {
+        margin-bottom: 30px !important;
+    }
+
+    .copyright {
+        border-top: none;
+        padding-top: 0;
     }
 }
 
 @media (max-width: 480px) {
+    .logo-container,
+    .content-wrapper,
+    .testimonials-wrapper {
+        padding: 24px;
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+    .logo-container {
+        margin-top: 24px;
+        margin-bottom: 24px !important;
+    }
+
+    .content-wrapper {
+        margin-bottom: 24px;
+    }
+
+    .testimonials-wrapper {
+        margin-bottom: 24px;
+    }
+
     .container {
-        padding-left: 16px;
-        padding-right: 16px;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .logo {
