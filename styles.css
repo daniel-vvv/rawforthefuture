@@ -6,6 +6,11 @@
 
 body {
     background-color: #000000;
+    background-image: url('banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     min-height: 100vh;
     display: flex;
@@ -21,6 +26,11 @@ body {
     padding: 0px;
     max-width: 900px;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px 20px;
 }
 
 .logo-container {
@@ -146,6 +156,20 @@ body {
 }
 
 /* Responsive design for mobile */
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+        align-items: stretch;
+    }
+
+    .container {
+        border-radius: 0;
+        max-width: 100%;
+        min-height: 100vh;
+        padding: 40px 20px;
+    }
+}
+
 @media (max-width: 480px) {
     .container {
         padding-left: 16px;
@@ -153,7 +177,7 @@ body {
     }
 
     .logo {
-        max-width: 200px;
+        max-width: 160px;
     }
 
     .logo-container {
