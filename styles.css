@@ -13,12 +13,13 @@ body {
     justify-content: center;
     padding-top: 32px;
     padding-bottom: 32px;
+    width: 100%;
 }
 
 .container {
     text-align: center;
-    padding: 20px;
-    max-width: 600px;
+    padding: 0px;
+    max-width: 900px;
     width: 100%;
 }
 
@@ -74,10 +75,22 @@ body {
     box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
 }
 
+.button-grab {
+    background-color: #00B14F;
+    color: #ffffff;
+}
+
 .button:hover {
     background-color: #f0f0f0;
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+}
+
+.button-grab:hover {
+    background-color: #009440;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 177, 79, 0.3);
 }
 
 .button:active {
@@ -87,9 +100,9 @@ body {
 .testimonials {
     margin-top: 50px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 20px;
-    max-width: 500px;
+    max-width: 620px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -99,6 +112,8 @@ body {
     padding: 20px;
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    flex: 1;
+    width: auto;
 }
 
 .stars {
@@ -110,7 +125,12 @@ body {
     color: #ffffff;
     font-size: 16px;
     font-style: normal;
+    font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     margin: 0;
+}
+
+.testimonial p .emoji {
+    font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
 }
 
 .copyright {
@@ -127,6 +147,11 @@ body {
 
 /* Responsive design for mobile */
 @media (max-width: 480px) {
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
     .logo {
         max-width: 200px;
     }
@@ -146,6 +171,10 @@ body {
     .button {
         font-size: 16px;
         padding: 15px 30px;
+    }
+
+    .testimonials {
+        flex-direction: column;
     }
 
     .testimonial p {
