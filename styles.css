@@ -6,7 +6,7 @@
 
 body {
     background-color: #000000;
-    background-image: url('banner.png');
+    background-image: url('bg-desktop.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -160,6 +160,7 @@ body {
     body {
         padding: 0;
         align-items: flex-start;
+        background-image: url('bg-mobile.png');
     }
 
     .container {
@@ -239,6 +240,7 @@ body {
     }
 
     .logo-container {
+        padding-bottom: 16px;
         margin-top: 24px;
         margin-bottom: 24px !important;
     }
